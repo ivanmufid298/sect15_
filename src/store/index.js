@@ -19,7 +19,7 @@ export default new Vuex.Store({
       axios
         .get('https://newsapi.org/v2/everything?q=apple&from=2022-03-29&to=2022-03-29&sortBy=popularity&apiKey=99da639dc1ce4117912c24440c9ecf6d')
         .then((response) => {
-          store.commit('setList', response.data)
+          store.commit('setList', response.data.articles)
           console.log('response', response)
         })
     }
